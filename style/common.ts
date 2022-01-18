@@ -22,6 +22,12 @@ export default css`
     .pt-${value} { padding-top: ${value}rem; }
     .pr-${value} { padding-right: ${value}rem; }
     .pb-${value} { padding-bottom: ${value}rem; }
+    
+    .ma-${value} { margin: ${value}rem; }
+    .ml-${value} { margin-left: ${value}rem; }
+    .mt-${value} { margin-top: ${value}rem; }
+    .mr-${value} { margin-right: ${value}rem; }
+    .mb-${value} { margin-bottom: ${value}rem; }
   `)}
   
   .flex-wrap { flex-wrap: wrap; }

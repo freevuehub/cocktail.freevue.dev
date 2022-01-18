@@ -91,7 +91,7 @@ const list = [
   },
   {
     name: '갓마더',
-    image: '9.png',
+    image: '9.jpg',
     ingredient: ['보드카 1.5oz', '아마레토 0.5oz'],
     recipe: [
       '얼음이 든 잔에 모든 재료를 넣고 젓는다.'

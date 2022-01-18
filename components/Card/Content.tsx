@@ -1,12 +1,8 @@
 import React from 'react'
-import { css } from '@emotion/react'
 
-const ContentCss = () => css`
-  padding: 10px;
-`
 const Content: React.FC = (props) => {
   return (
-    <div css={ContentCss}>
+    <div className="pa-1">
       {props.children}
     </div>
   )

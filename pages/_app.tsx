@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import { css, Global } from '@emotion/react'
+import { Global } from '@emotion/react'
 import { reset, common } from '~/style'
 
-const AppCss = () => css`
-  background-color: #e0e0e0;
-`
 const App = (props) => {
   return (
     <>
@@ -14,9 +11,7 @@ const App = (props) => {
         <title>Cocktail | FreeVue Toy</title>
       </Head>
       <Global styles={[reset, common]} />
-      <div css={AppCss} className="fill height">
-        <props.Component {...props.pageProps} />
-      </div>
+      <props.Component {...props.pageProps} />
     </>
   )
 }
