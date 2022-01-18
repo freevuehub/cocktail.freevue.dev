@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 
 const flexItems = ['center', 'start']
-const flexContents = ['center', 'space-between']
+const flexContents = ['center', 'space-between', 'space-evenly']
 const gap = [0, 1, 2, 3, 4, 5]
 const display = ['flex', 'block']
 

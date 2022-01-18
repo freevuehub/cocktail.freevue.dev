@@ -9,7 +9,8 @@ interface IProps {
 }
 
 const CardCss = () => css`
-  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
   .cover {
     max-height: 400px;
     overflow: hidden;
@@ -17,10 +18,10 @@ const CardCss = () => css`
 `
 const Home: NextPage<IProps> = (props) => {
   return (
-    <div className="d-flex ai-start jc-space-between pa-3 flex-wrap ga-3">
+    <div className="d-flex ai-start jc-space-between pa-2 flex-wrap">
       {
         props.list.map((item) => (
-          <Card key={item.name} css={CardCss} href={item.name}>
+          <Card css={CardCss} href={item.name} key={item.name} className="mb-3">
             <div className="cover">
               <img className="d-block fill width" src={`/image/${item.image}`} alt={item.name} />
             </div>
