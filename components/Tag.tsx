@@ -10,7 +10,7 @@ const TagCss = () => css`
 
 const Tag: React.FC = (props) => {
   return (
-    <span css={TagCss} className="d-block">{props.children}</span>
+    <span css={TagCss} className="d-flex ai-center">{props.children}</span>
   )
 }
 
