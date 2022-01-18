@@ -2,18 +2,22 @@ import React from 'react'
 import { css } from '@emotion/react'
 import Content from './Content'
 
-interface ICard extends React.FC {
+interface IProps {
+  className?: string
+}
+interface ICard extends React.FC<IProps> {
   Content: React.FC
 }
 
 const CardCss = () => css`
-  border-radius: 50px;
+  border-radius: 20px;
   background: #e0e0e0;
-  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  overflow: hidden;
 `
 const Card: ICard = (props) => {
   return (
-    <div css={CardCss}>
+    <div css={CardCss} className={props.className || ''}>
       {props.children}
     </div>
   )
