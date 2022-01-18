@@ -1,14 +1,14 @@
 import { NextPage } from 'next'
-import { css } from '@emotion/react'
+import { Card } from '~/components'
 
-const HomeCss = css`
-  font-size: 20px;
-  color: red;
-`
 const Home: NextPage = () => {
   return (
-    <div css={HomeCss}>
-      Hello World
+    <div className="d-flex fill height ai-center jc-center">
+      <Card>
+        <Card.Content>
+          Hello World
+        </Card.Content>
+      </Card>
     </div>
   )
 }
