@@ -1,4 +1,5 @@
 import { NextPage, GetServerSideProps } from 'next'
+import { css } from '@emotion/react'
 import { Card, Tag, Button } from '~/components'
 import DATA_BASE from '~/DATA_BASE'
 import { ICocktail } from '~/types'
@@ -7,9 +8,13 @@ interface IProps {
   data: ICocktail
 }
 
+const DetailCss = () => css`
+  max-width: 980px;
+  margin: 0 auto;
+`
 const Detail: NextPage<IProps> = (props) => {
   return (
-    <div className="pa-3">
+    <div className="pa-3" css={DetailCss}>
       <Card>
         <img className="d-block fill width" src={`/image/${props.data.image}`} alt={props.data.name} />
       </Card>
@@ -20,6 +25,18 @@ const Detail: NextPage<IProps> = (props) => {
         </p>
       </div>
       <hr />
+      <div className="mt-3 mb-3">
+        <h3>재료</h3>
+        <ul className="pl-1 pr-1">
+          {
+            props.data.ingredient.map((recipe) => (
+              <li key={recipe} className="mb-1 mt-1">
+                <p>{recipe}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
       <div className="mt-3 mb-3">
         <h3>레시피</h3>
         <ol className="pl-1 pr-1">
